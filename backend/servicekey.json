@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "mymental-ot21",
+    "private_key_id": "8f7be853e681717e41c253e12faa1f505a21f87c",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCvxZ5yx4M1lzWF\n+qdUism4Kg0nE7XV0MCd2PtK5XxvPB6V4uMc6YqJUM4PSazUzBozHiOjvUwWBpue\nYo/IgwxlUv3IbQWAkFh0DbwPSZKpXrNo+PWqvVeqKik9AG10e2awODYMPBIpuwJy\nxbhwcsTPsOBesTHXJPf6pgx/w47eqaJNfgWGalyo/47uowlx8lkG3RnitmxUO3pL\nvkGSV+hq5POf9tPfWFEdQzALqVrKydTt6O3lujVQcTa+Zu3i1WuiCZmPvGZV5PWg\nMAbFTMegh3jcB54MriNLm+08ghLciVO18T7A0iVVyYAGY834eeXvNfPXUDUegyar\nlT4pFP4XAgMBAAECggEAFt3wxSHrkfdAAVQgnMEJiSn/WAwaZdyokmB+ILpGO/po\nSDuiLEq9uSuIAzkkgPKkne3X2R9xXJQzfqF37zANVsk7Nu3n/1fICiEXTC3YJKyr\nTobE/xdu5jZh8wuxMaw0KczGS0UtX7xyjxfl7Mshi5uJNQh8YW7vy+36Rkzcs17K\nfBI1+RjchV8STX++HDmg7Zq3gkHqMNbfkz9BH863yAEmxxB8TaNj2bO3US5GoABN\nVpFJ5m0K110Mk2IpOHVPEjH5XixbNTv5PebteuaAscorqy7U/nYwXkPsDiiU3O5t\nm/ZAsvSH6YSij8q6coSDtLJEAY1n6Rj5+5AfqM0LIQKBgQD0hoXW1+wT18gEZnrV\nEDGj2rfNkLpvR8t+hzSFVv/HOfO2b1J7JtgRQfGAFUXZa0NCwPzXCvyHg3+VjJfJ\n1PEGL+56d8O3O92IJhvAa0JteeFxJFY73PS89C1jH5XuB42CFkrYSELw9c4cG670\nMZpTAo+fmgqup4uYj6CQIGSOiQKBgQC4BSl7v6Sb3JQ15urIlxYgYzlDCwVIc2Tc\niYrdd/DpzUnpaVpSaVy22KE5okTDyCrzu7TEiEMD9mH88MBKOn6feHCl57K+ERsc\nOxR5OHjb+UibKeViBwikmfXTfl34lqvfuVsyITUZ5ATgRVh78FcR5a9BctrzJJwQ\nZ617Yfb/nwKBgCY3vEVm/APh7uYZKkuQu2FzttSPMURhQUHmWeQZQ+LcgOXbolWT\nLaQM3XT6Xi9sH1gYl6v4kJ2RhOhX0AWAnacs6KYFf/ZsieRUqHO7j+dSbFTlrACx\nOSMrOsjKUAGi9pAFce855BSLJoqoHQEXm5orxUzZo5/Gmf/fOuYr2euZAoGAWqtY\ndDvJ/G3jrOdZOXqQEWcyWKE+eiM5SByRCmxFjL10tIgPU9nML99vGPmmDh07ZJpR\nCCDnfDVStJFe/XPy3do3Dtepz1KYXAGUJeI4UpJyPtmWxwUWMhwV7p4t6QU8LGCk\n2X9ZLaeW63XfkjmqfQwBnSrdTL32E3MyHD/5tpsCgYEAgEGwWemTrq+4JpYj8INJ\nW2lUWKJKF4iMuA7clSZSMMu+aDpVCOWN4wdmg/mfeK+x9Wvj4eKw4YXiAxTOsjX8\nT99c4+2r/xmrleoXSfZ5mo2cDc4lUoi4MP+pxWyfU8o3MTckQbLXvRD9TzQOh+IZ\nr/n461XpodcEsb1PTdEvG6o=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-rezml@mymental-ot21.iam.gserviceaccount.com",
+    "client_id": "100992048328421240834",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-rezml%40mymental-ot21.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  

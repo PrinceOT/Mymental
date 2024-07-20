@@ -1,0 +1,442 @@
+.MH-Block-Links {
+    padding: 54px 57px;
+    display: flex;
+  }
+
+  .MH-Block-Links--Block {
+    white-space: normal;
+    position: relative;
+    flex: 1;
+    margin-right: 33px;
+    padding: 54px 75px;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
+    border: solid 1px #ffffff;
+  }
+
+  .MH-Block-Links--Block .RG-type-h2 {
+    color: rgba(0, 30, 255, 0.60);
+  }
+
+  .MH-Block-Links--Block:hover {
+    border: solid 1px #001eff;
+    box-shadow: 2px 2px 10px 1px rgba(0, 30, 255, 0.10);
+  }
+
+  .MH-Block-Links--Block:hover .RG-type-h2 {
+    color: #001eff;
+  }
+
+  .MH-Block-Links--Block .RG-type-copy {
+    padding-bottom: 0;
+  }
+
+  .MH-Block-Links--Link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .MH-Block-Links {
+      padding: 30px 15px;
+      display: block;
+    }
+
+    .MH-Block-Links--Block {
+      margin-right: 0;
+      margin-bottom: 16px;
+      padding: 40px;
+    }
+
+    .MH-Block-Links--Block .RG-type-h2 {
+      font-size: 23px;
+    }
+  }
+
+  /* MH Resources */
+  .MH-Resources {
+    padding: 30px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100VW;
+  }
+
+  .MH-Resources-Header {
+    font-family: Overpass;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.60);
+    border-bottom: solid 1px currentColor;
+    padding-bottom: 1em;
+  }
+
+  .MH-Resources .RG-type-copy {
+    padding: 0.25em 0;
+  }
+
+  .MH-Resources-Slider {
+    display: flex;
+    padding: 30px 0 0 1px;
+    margin-bottom: 30px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100VW;
+  }
+
+  .MH-Resources .MH-Block-Links--Block {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 70%;
+    min-width: 250px;
+    min-height: 264px;
+    box-sizing: content-box;
+  }
+
+  .MH-Resources .MH-Block-Links--Block .RG-type-link {
+    margin-top: auto;
+    color: rgba(0, 30, 255, 0.60);
+    text-decoration: none;
+
+    position: relative;
+    display: inline-block;
+    margin-right: auto;
+    font-weight: 400;
+    margin-bottom: 0;
+    pointer-events: none;
+  }
+  
+
+  .MH-Resources .RG-type-copy a {
+    position: relative;
+    color: #001eff;
+  }
+  .MH-Block-Links--Block svg {
+
+  display: inline-block;
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    right: -30px;
+  }
+  @media (min-width: 1024px) {
+    
+  .MH-Block-Links--Block svg {
+    top: 7px;
+  
+  }
+  }
+  
+  .MH-Block-Links--Block:hover svg {
+    
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+  .MH-Resources .RG-type-copy strong {
+    font-weight: 400;
+  }
+
+
+  @-webkit-keyframes bounce {
+
+    0%,
+    100% {
+      right: -30px;
+    }
+
+    50% {
+      right: -35px;
+    }
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      right: -30px;
+    }
+
+    50% {
+      right: -35px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .MH-Resources-Header {
+      font-family: Overpass;
+      font-size: 18px;
+    }
+    .MH-Resources-Slider .MH-Block-Links--Block{
+      max-width: 330px;
+      width: 330px;
+    }
+    .MH-Resources .MH-Block-Links--Block {
+    
+    width: 330px;
+    margin-right: 33px;
+    }
+  }
+
+
+  /* ALEC */
+  .word-tabs_content .cause_copy-block--3col.active .cause_copy-block {
+
+    max-width: 900px;
+  }
+  
+  .MH-Block-Links--Link{
+    color: transparent !important;
+  }
+  .MH-Block-Links {
+    padding: 54px 57px;
+    display: flex;
+  }
+
+  .MH-Block-Links--Block {
+    white-space: normal;
+    position: relative;
+    flex: 1;
+    margin-right: 33px;
+    padding: 54px 75px;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
+    border: solid 1px #ffffff;
+  }
+
+  .MH-Block-Links--Block .RG-type-h2 {
+    color: rgba(0, 30, 255, 0.60);
+  }
+
+  .MH-Block-Links--Block:hover {
+    border: solid 1px #001eff;
+    box-shadow: 2px 2px 10px 1px rgba(0, 30, 255, 0.10);
+  }
+
+  .MH-Block-Links--Block:hover .RG-type-h2 {
+    color: #001eff;
+  }
+
+  .MH-Block-Links--Block .RG-type-copy {
+    padding-bottom: 0;
+  }
+
+  .MH-Block-Links--Link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .MH-Block-Links {
+      padding: 30px 15px;
+      display: block;
+    }
+
+    .MH-Block-Links--Block {
+      margin-right: 0;
+      margin-bottom: 16px;
+      padding: 40px;
+    }
+
+    .MH-Block-Links--Block .RG-type-h2 {
+      font-size: 23px;
+    }
+  }
+
+  /* MH Resources */
+  .MH-Resources {
+    padding: 30px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100VW;
+    margin-left: 46px;
+  }
+
+  .MH-Resources-Header {
+    font-family: Overpass;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.60);
+    border-bottom: solid 1px currentColor;
+    padding-bottom: 1em;
+  }
+
+  .MH-Resources .RG-type-copy {
+    padding: 0.25em 0;
+  }
+
+  .MH-Resources-Slider {
+    display: flex;
+    padding: 30px 0 0 1px;
+    margin-bottom: 30px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100VW;
+  }
+
+  .MH-Resources .MH-Block-Links--Block {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 70%;
+    min-width: 250px;
+    min-height: 264px;
+    box-sizing: content-box;
+  }
+
+  .MH-Resources .MH-Block-Links--Block .RG-type-link {
+    margin-top: auto;
+    color: rgba(0, 30, 255, 0.60);
+    text-decoration: none;
+
+    position: relative;
+    display: inline-block;
+    margin-right: auto;
+    font-weight: 400;
+    margin-bottom: 0;
+    pointer-events: none;
+  }
+  
+
+  .MH-Resources .RG-type-copy a {
+    position: relative;
+    color: #001eff;
+  }
+  .MH-Block-Links--Block svg {
+
+  display: inline-block;
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    right: -30px;
+  }
+  @media (min-width: 1024px) {
+    
+  .MH-Block-Links--Block svg {
+    top: 7px;
+  
+  }
+  }
+  .RG .RG-type-h6 {
+    margin: 0;
+    font-family: Overpass;
+    font-size: 23px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #000000;
+    text-transform: none !important;
+}
+.MH-Resources .RG-type-copy {
+    padding: 0.25em 0;
+}
+  
+  .MH-Block-Links--Block:hover svg {
+    
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+  .MH-Resources .RG-type-copy strong {
+    font-weight: 400;
+  }
+  .RG{
+    margin-left:10px;
+  }
+  .RG .RG-type-h2 {
+    font-family: Anton;
+    font-size: 37px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.93;
+    letter-spacing: -0.5px;
+    color: #000000;
+    margin-left: 58px;
+}
+
+
+  @-webkit-keyframes bounce {
+
+    0%,
+    100% {
+      right: -30px;
+    }
+
+    50% {
+      right: -35px;
+    }
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      right: -30px;
+    }
+
+    50% {
+      right: -35px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .MH-Resources-Header {
+      font-family: Overpass;
+      font-size: 18px;
+    }
+    .MH-Resources-Slider .MH-Block-Links--Block{
+      max-width: 330px;
+      width: 330px;
+    }
+    .MH-Resources .MH-Block-Links--Block {
+    
+    width: 330px;
+    margin-right: 33px;
+    }
+  }
+
+
+  /* ALEC */
+  .word-tabs_content .cause_copy-block--3col.active .cause_copy-block {
+
+    max-width: 900px;
+  }
+  
+  .MH-Block-Links--Link{
+    color: transparent !important;
+  }

@@ -1,0 +1,16 @@
+/* styles.css */
+.post-feed {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .post {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .post strong {
+    margin-right: 5px;
+  }
+  

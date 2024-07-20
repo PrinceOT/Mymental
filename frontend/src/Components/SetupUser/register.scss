@@ -1,0 +1,340 @@
+.containers {
+    padding: 16px;
+    width: 520px;
+    display:grid;
+    grid-template-columns: 250px 250px;
+    grid-row: auto auto;
+    grid-column-gap:93px;
+    grid-row-gap: 20px;
+
+    .input{
+     
+      
+      
+      align-items:flex-start;
+      justify-content:center;
+     
+      font-family:sans-serif;
+    }
+    
+    
+  }
+.container-login {
+    padding-top: 20px;
+    padding-left: 150px;
+    width: 520px;
+    display:grid;
+    grid-template-columns: 250px ;
+    grid-row: auto auto;
+    grid-column-gap: 100px;
+    grid-row-gap: 30px;
+
+    .input{
+     
+      
+      
+      align-items:flex-start;
+      justify-content:center;
+     
+      font-family:sans-serif;
+    }
+    
+  }
+  .full-page h1{
+    font-size: 4.6rem;
+    position: relative;
+    left: 169px;
+    width:350px;
+    margin-bottom:10px;
+
+  }
+  .container-sign{
+    position: relative;
+    right:10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    // align-content: center;
+    // justify-content: center;
+    grid-template-columns: 200px;
+    grid-row-gap: 20px;
+  }
+  .register{
+margin-left:30%;
+margin-top:2%;
+
+
+  }
+  .btn-primarys{
+  color: #fff;
+background: #040505;
+
+
+position: relative;
+padding: 0px 32px;
+vertical-align: middle;
+box-sizing: border-box;
+opacity: 1;
+transition: opacity 300ms;
+
+left:20%;
+justify-content: center;
+line-height: normal;
+line-height: 1.1;
+text-align: center;
+text-transform: inherit;
+border:none;
+font-size: 1.4rem;
+border-radius: 100px;
+line-height: 25px;
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 1.6rem;
+min-width: 124px;
+height: 4.6rem;
+cursor: pointer;
+  }
+  .btn-secondary{
+  color: #000000;
+background: #cdcdcd;
+
+
+position: relative;
+padding: 0px 32px;
+vertical-align: middle;
+box-sizing: border-box;
+opacity: 1;
+transition: opacity 300ms;
+
+// left:27%;
+right:90%;
+justify-content: center;
+line-height: normal;
+line-height: 1.1;
+text-align: center;
+text-transform: inherit;
+border:none;
+font-size: 1.4rem;
+border-radius: 100px;
+line-height: 25px;
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 1.6rem;
+min-width: 124px;
+height: 4.6rem;
+cursor: pointer;
+  }
+  .btn-secondary a {
+    color: #000000;
+    text-decoration: none;
+  
+  }
+  .password{
+    display: flex;
+  gap: 10px;
+  }
+  label{
+    font-size: 1.6rem;
+font-weight: 700;
+    
+
+  }
+  .container input[type=password] , .container-login input[type=password]  {
+   
+    gap: 10px;
+    height: 50px;
+    width: 100%;
+    margin: 5px 0 22px 0;
+    background: #f1f1f1;
+    border-radius: 0.5rem;
+    padding:15px;
+    font-size: 1.2rem;
+
+  }
+  .divider {
+    height: 1px;
+    background: #D1D1D1;
+    border:2px;
+    margin-top: 32px;
+    width:610px;
+    }
+
+    .login-header {
+      position: relative;
+      font-size: 2.2rem;
+      font-family: MarkPro-Bold, Arial, sans-serif;
+      // display: grid;
+      // justify-content: center;
+      
+      margin-bottom: 4%;
+      margin-right:27%;
+      }
+  .container input[type=email] ,.container-login input[type=email]{
+    padding:15px;
+
+   /* //left:20%; */
+    gap: 10px;
+    height: 50px;
+    width: 100%;
+    margin: 5px 0 22px 0;
+    background: #f1f1f1;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+
+  }
+  .container input[type=text] {
+    height: 50px;
+    width: 100%;
+    gap: 10px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+   
+    background: #f1f1f1;
+  }
+  
+ .container input[type=text]:focus, .container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity:1;
+  }
+  
+  /* Add a blue text color to links */
+  // a {
+  //   color: dodgerblue;
+  // }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  .error{
+    color:rgb(158, 87, 87) ;
+    margin-bottom:15px;
+  }
+  .btn-secondary:hover{
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  }
+  .btn-primary:hover{
+    background-color: #545454;
+    box-shadow: 0 4px 4px 0 rgba(0 , 0 , 0 , 0.2);
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4070f4;
+  }
+  .wrapper{
+    position: relative;
+    max-width: 530px;
+   width: 500px;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .wrapper h2{
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+  .wrapper h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: rgb(161, 166, 252)
+  }
+  .wrapper form{
+    margin-top: 30px;
+  }
+  .wrapper form .input-box{
+    height: 52px;
+    margin: 18px 0;
+  }
+  form .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  .input-box input:focus,
+  .input-box input:valid{
+    border-color: rgb(161, 166, 252)
+  }
+  form .policy{
+    display: flex;
+    align-items: center;
+  }
+  form h3{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .input-box.button input{
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: rgb(161, 166, 252);
+    cursor: pointer;
+  }
+  .input-box.button input:hover{
+    background: #0e4bf1;
+  }
+  form .text h3{
+   color: #333;
+   width: 100%;
+   text-align: center;
+  }
+  form .text h3 a{
+    color: #4070f4;
+    text-decoration: none;
+  }
+  form .text h3 a:hover{
+    text-decoration: underline;
+  }
