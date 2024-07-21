@@ -33,6 +33,7 @@ const Feed = () => {
         const timeline = await getTimeline();
         
         setTimeline(timeline);
+        console.log(timeline);
 
           
 

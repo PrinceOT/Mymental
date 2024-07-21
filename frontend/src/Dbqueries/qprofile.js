@@ -1,7 +1,13 @@
 import axios from 'axios';
 import { doc,updateDoc} from 'firebase/firestore';
 import { db } from '../Auth/firebase';
+
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const signupuser = async (username,psw,email,uid,url) => {
+
+
+  
   
  
     try {
