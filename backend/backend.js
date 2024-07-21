@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 const pool = require("./database");
 
-app.use(cors());
-app.use(express.json());
+// app.use(cors());
+// app.use(express.json());
 
 const admin = require('firebase-admin');
 const serviceAccount = require('./servicekey.json');
@@ -13,6 +13,12 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 const db = admin.firestore();
+app.use("/", (req,res)=> {
+  
+    // prettyPrintResponse(error.res);
+    // res.json(formatError(error.res));
+    res.send("Server is running")
+  });
 
 // Middleware or route handler to verify the Firebase ID token
 const verifyToken = async (token) => {
@@ -592,9 +598,7 @@ app.patch("/chat",async(req,res)=>{
    // res.json(processedData););
 
 // get progress data
-app.listen(3001,()=>{
-console.log("server has started onport 3001");
-
-})
+app.listen(3001,
+console.log("server has started onport 3001"))
 
 
