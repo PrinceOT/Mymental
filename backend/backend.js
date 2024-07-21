@@ -13,6 +13,11 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 const db = admin.firestore();
+app
+
+pp.get('/', (req, res) => {
+    res.send('Welcome to the Backend API!');
+  });
 
 // app.use("/api/", (request,response)=> {
   
