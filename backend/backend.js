@@ -19,7 +19,7 @@ app
 app.use('/', async (req, res) => {
     const query = "select imageurl,username,content,users.fbid,ptid,post.created_at, profilepic from post inner join users on users.fbid = post.fbid order by ptid ASC"
     const timeline = await pool.query(query);
-    res.send(timeline);
+    res.send(timeline.rows);
   });
 
 // app.use("/api/", (request,response)=> {
