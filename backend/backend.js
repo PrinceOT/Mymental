@@ -16,7 +16,7 @@ admin.initializeApp({
 const db = admin.firestore();
 app
 
-app.get('/', (req, res) => {
+app.use('/', (req, res) => {
     res.send('Welcome to the Backend API!');
   });
 
