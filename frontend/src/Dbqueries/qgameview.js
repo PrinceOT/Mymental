@@ -1,10 +1,12 @@
 import axios from 'axios';
 
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const getgames = async  () => {
 
     try {
-        const response = await axios.get('http://localhost:3001/gameview');
+        const response = await axios.get(`${apiUrl}/gameview`);
         
         return response.data
     
@@ -16,7 +18,7 @@ const getgames = async  () => {
 const getonegame = async  (image) => {
 
     try {
-        const response = await axios.get('http://localhost:3001/onegame',{
+        const response = await axios.get(`${apiUrl}/onegame`,{
           headers: {
             imageurl: image,
           },
@@ -35,7 +37,7 @@ const getonegame = async  (image) => {
   
     
     try {
-        const response = await axios.get( "http://localhost:3001/getlikegame",{
+        const response = await axios.get( `${apiUrl}/getlikegame`,{
           
         headers: {
           gid:gid,
@@ -57,7 +59,7 @@ const postgamelikes = async (gid) => {
     
    
    console.log(gid);
-   const response = await axios.patch("http://localhost:3001/patchlikes",{gid}
+   const response = await axios.patch(`${apiUrl}/patchlikes`,{gid}
    );
 
  // console.log('User Data:', response.data);

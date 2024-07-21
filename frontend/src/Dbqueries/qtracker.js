@@ -7,7 +7,7 @@ import axios from 'axios';
    
     const idToken = await user.getIdToken();
     try {
-        const response = await axios.post('http://localhost:3001/mymental/progress', dataToSend,{
+        const response = await axios.post(`${apiUrl}/mymental/progress`, dataToSend,{
           headers: {
             Authorization: idToken,
           },
@@ -28,7 +28,7 @@ const getUserData = async (user) => {
      try {
        
         console.log(user);
-      const response = await axios.get('http://localhost:3001/mymental/progress/get', {
+      const response = await axios.get(`${apiUrl}/mymental/progress/get`, {
         headers: {
           Authorization: idToken,
         },

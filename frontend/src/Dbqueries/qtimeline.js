@@ -11,7 +11,7 @@ const getTimeline = async ( ) => {
     try {
       
       // console.log(user);
-     const response = await axios.get("http://localhost:3001/post", {
+     const response = await axios.get(`${apiUrl}/post`, {
     
      });
  
@@ -25,7 +25,7 @@ const getcomments = async (ptid) => {
 
     try {
 
-     const response = await axios.get("http://localhost:3001/comments", {
+     const response = await axios.get(`${apiUrl}/comments`, {
       headers: {
         Ptid: ptid,
        }
@@ -41,7 +41,7 @@ const getlikes = async (ptid) => {
       
      
        
-     const response = await axios.get("http://localhost:3001/likes",{
+     const response = await axios.get(`${apiUrl}/likes`,{
        headers: {
         
         Ptid: ptid,
@@ -58,7 +58,7 @@ const countlikes = async (ptid,user) => {
       
      
       const idToken = await user.getIdToken();
-     const response = await axios.get("http://localhost:3001/count",{
+     const response = await axios.get(`${apiUrl}/count`,{
        headers: {
         Authorization:idToken,
         Ptid: ptid,
@@ -77,7 +77,7 @@ const countlikes = async (ptid,user) => {
     const idToken = await user.getIdToken();
     try {
       console.log(dataToSend);
-        const response = await axios.post("http://localhost:3001/post", dataToSend,{
+        const response = await axios.post(`${apiUrl}/post`, dataToSend,{
           headers: {
             Authorization: idToken,
           },
@@ -94,7 +94,7 @@ const countlikes = async (ptid,user) => {
     const idToken = await user.getIdToken();
     try {
       console.log(dataToSend.Ptid)
-       const response = await axios.post( "http://localhost:3001/comments",dataToSend,{
+       const response = await axios.post( `${apiUrl}/comments`,dataToSend,{
           headers: {
             Authorization: idToken,
           },
@@ -114,7 +114,7 @@ const countlikes = async (ptid,user) => {
   
     const idToken = await user.getIdToken();
     try {
-        const response = await axios.post( "http://localhost:3001/likes",Ptid,{
+        const response = await axios.post( `${apiUrl}/likes`,Ptid,{
           headers: {
             Authorization: idToken,         
           },
@@ -135,7 +135,7 @@ const countlikes = async (ptid,user) => {
     const idToken = await user.getIdToken();
     
     try {
-        const response = await axios.delete( "http://localhost:3001/likes",{
+        const response = await axios.delete( `${apiUrl}/likes`,{
           headers: {
             Authorization: idToken,
             Ptid:dataToSend,

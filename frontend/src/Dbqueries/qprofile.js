@@ -7,7 +7,7 @@ const signupuser = async (username,psw,email,uid,url) => {
     try {
       
       console.log(username)
-     const response = await axios.post('http://localhost:3001/signup', {
+     const response = await axios.post(`${apiUrl}/signup`, {
       user:username,
       psw:psw,
       email:email,
@@ -29,7 +29,7 @@ const getuser = async (user) => {
      try {
        
         
-      const response = await axios.get('http://localhost:3001/user', {
+      const response = await axios.get(`${apiUrl}/user`, {
         headers: {
           Authorization: idToken,
         },
@@ -47,7 +47,7 @@ const getother = async (user) => {
      try {
        
         console.log(user);
-      const response = await axios.get('http://localhost:3001/other', {
+      const response = await axios.get(`${apiUrl}/other`, {
         headers: {
           Authorization: user,
         },
@@ -65,7 +65,7 @@ const getprofile = async (user) => {
      try {
        
         console.log(user);
-      const response = await axios.get('http://localhost:3001/userinfo', {
+      const response = await axios.get(`${apiUrl}/userinfo`, {
         headers: {
           Authorization: idToken,
         },
@@ -83,7 +83,7 @@ const getotherprofile = async (user) => {
      try {
        
         console.log(user);
-      const response = await axios.get('http://localhost:3001/otherinfo', {
+      const response = await axios.get(`${apiUrl}/otherinfo`, {
         headers: {
           Authorization: user,
         },
@@ -102,7 +102,7 @@ const updateuser = async (user,update) => {
       
 
         //console.log(update);
-      const response = await axios.patch('http://localhost:3001/user',update, {
+      const response = await axios.patch(`${apiUrl}/user`,update, {
         headers: {
           Authorization: idToken,
         },
@@ -120,7 +120,7 @@ const updateuser = async (user,update) => {
 
       try {
          //console.log(update);
-       const response = await axios.patch('http://localhost:3001/chat',{update:update,uid:user});
+       const response = await axios.patch(`${apiUrl}/chat`,{update:update,uid:user});
        console.log('User Data:', response);
        //return response.data;
      } catch (error) {
