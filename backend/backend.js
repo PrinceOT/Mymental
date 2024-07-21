@@ -8,14 +8,15 @@ app.use(express.json());
 
 const admin = require('firebase-admin');
 const serviceAccount = require('./servicekey.json');
-
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-// });
+if(!admin.getApps){
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
+}
 const db = admin.firestore();
 app
 
-pp.use('/', (req, res) => {
+app.use('/', (req, res) => {
     res.send('Welcome to the Backend API!');
   });
 
