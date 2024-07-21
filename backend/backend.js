@@ -14,12 +14,12 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 
-app.use("/", (req,res)=> {
+// app.use("/", (req,res)=> {
   
-    // prettyPrintResponse(error.res);
-    // res.json(formatError(error.res));
-    res.json("Server is running")
-  });
+//     // prettyPrintResponse(error.res);
+//     // res.json(formatError(error.res));
+//     res.json("Server is running")
+//   });
 
 // Middleware or route handler to verify the Firebase ID token
 const verifyToken = async (token) => {
