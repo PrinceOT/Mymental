@@ -26,7 +26,9 @@ const Feed = () => {
         const fetchData = async () =>{
             addWords("kill","die")
              if(user){
+                console.log(user)
             const id =  await getuser(user);
+            console.log(id);
             const pp = id[0].profilepic;
               setU(pp);
              }

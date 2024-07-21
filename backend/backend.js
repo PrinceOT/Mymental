@@ -362,6 +362,7 @@ app.get("/user",async(req,res)=> {
 
   const query = "SELECT * FROM users where fbid = $1"
   const userinfo = await pool.query(query,[fbid]);
+  console.log("request recieved")
   res.json(userinfo.rows)
     }catch (error){
         console.error('Error inserting data:', error);
