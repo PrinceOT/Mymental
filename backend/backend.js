@@ -13,6 +13,7 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 const db = admin.firestore();
+
 app.use("/", (req,res)=> {
   
     // prettyPrintResponse(error.res);
