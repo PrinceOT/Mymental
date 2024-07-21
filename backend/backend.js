@@ -14,7 +14,7 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 
-app.use("/", (request,response)=> {
+app.use("/api/", (request,response)=> {
   
     // prettyPrintResponse(error.res);
     // res.json(formatError(error.res));
