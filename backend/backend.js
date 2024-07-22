@@ -16,11 +16,11 @@ admin.initializeApp({
 const db = admin.firestore();
 app
 
-app.use('/', async (req, res) => {
-    const query = "select imageurl,username,content,users.fbid,ptid,post.created_at, profilepic from post inner join users on users.fbid = post.fbid order by ptid ASC"
-    const timeline = await pool.query(query);
-    res.send(timeline.rows);
-  });
+// app.use('/', async (req, res) => {
+//     const query = "select imageurl,username,content,users.fbid,ptid,post.created_at, profilepic from post inner join users on users.fbid = post.fbid order by ptid ASC"
+//     const timeline = await pool.query(query);
+//     res.send(timeline.rows);
+//   });
 
 // app.use("/api/", (request,response)=> {
   
@@ -368,10 +368,11 @@ app.get("/user",async(req,res)=> {
     try{
         const decodedToken = await verifyToken(idToken);
         const fbid = await decodedToken.uid;
-
+ 
   const query = "SELECT * FROM users where fbid = $1"
   const userinfo = await pool.query(query,[fbid]);
   console.log("request recieved")
+  console.log(userinfo.rows)
   res.json(userinfo.rows)
     }catch (error){
         console.error('Error inserting data:', error);
