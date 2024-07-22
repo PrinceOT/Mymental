@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
    .div {
   font-family: 'Anek Malayalam', sans-serif;
   
@@ -12,10 +12,9 @@
 }
 
 .quiz-container {
-  
-  width: 846px;
-  height: 100%;
-  
+  box-shadow: 5px 4px 8px rgba(168, 123, 172, 0.1);
+
+  justify-content: center;
   background: #ffffff;
   border-radius: 24px;
   border: 3px solid #a43d92;
@@ -23,8 +22,9 @@
   padding: 20px 47px;
 }
 .quiz-container p {
-  margin-top:10px;
-  font-weight:600px ;
+ 
+ 
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .quiz-container .active-question-no {
@@ -47,12 +47,70 @@
   justify-content: center;
   padding-top: 30px;
   
+  
+  
+}
+.quiz-container h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  margin: 0;
+ 
+  padding-top: 5px;
+  
+  
+}
+.quiz-container dt{
+  padding-top: 5px;
+  max-height: 50px;
+  font-family: "Red Hat Display", sans-serif;
+
+}
+
+.quiz-container h1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  text-decoration: underline ;
+  text-decoration-thickness:auto;
+  text-decoration-color: #800080;
+  padding-top: 30px;
+  
+  
 }
 .quiz-container .answers{
   padding-top: 40px;
-  margin-left: 41px;
-  justify-content: space-evenly;
   
+display:flex;
+  justify-content: space-evenly;
+  justify-content: center;
+  
+  
+}
+.quiz-container {
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    color: #ff6347;
+    font-weight: bold;
+    display: inline-block; 
+    font-family: "Red Hat Display", sans-serif;
+    width: 1em;
+    margin-left: -1em;
+}
+
 }
 
 
@@ -207,5 +265,14 @@
    cursor: pointer;
    
   }
+  .assessment-container {
+   
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
   

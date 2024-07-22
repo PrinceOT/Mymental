@@ -114,7 +114,7 @@ console.log(u);
           <p class="name">{data.user?.username}</p>
           <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
         </div>
-        <div class="messages-chat">
+        <div class="messages-chat"  style={{  overflow:"hidden"}}>
         {chat && chat.map((message)=>(
             <Message key={message.id} message={message}/>
         ))}
@@ -124,7 +124,10 @@ console.log(u);
        {/* // <span ref={scroll}></span> */}
       </section> ):
       ( <section class="chat">
-      <div style={{width:"80vw", height:"100vh",margin:"250px 150px",position:"relative", overflow:"hidden"}}> <img src={logo}/> <h2 style={{fontWeight:"300",fontSize:"2rem"}}>Select or Search a chat and start chatting</h2></div> 
+      <div style={{width:"80vw", height:"100vh",margin:"250px 150px",position:"relative", overflow:"hidden"}}>
+         <img src={logo}/> 
+         <h2 style={{fontWeight:"300",fontSize:"2rem"}}>Select or Search a chat and start chatting</h2>
+         </div> 
       </section>)}
     </div>
   </div>

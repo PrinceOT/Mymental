@@ -349,10 +349,9 @@ figure.card {
 
 
 .feed{
-  
-  display: flex;
+ 
   flex-direction: column-reverse;
-  margin-left:24%;
+
 
 }
 /*Feed.css*/
@@ -868,7 +867,7 @@ display:block
 .rows{
   display: inline-flex;
   height:100vh;
-  width:100%;
+  width:94.777825vw;
 }
 /* ===== MENU ===== */
 
@@ -885,7 +884,7 @@ display:block
 }
 
 .discussions .discussion {
-  width: 100%;
+  // width: 100%;
   height: 110px;
   background-color: #FAFAFA;
   border-bottom: solid 1px #E0E0E0;

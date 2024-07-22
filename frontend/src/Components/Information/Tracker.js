@@ -236,7 +236,7 @@ fetchData();
 
   return (
 <>
-{ true ? (
+{ false ? (
   <>
   {/* <h2 style={{marginLeft:"200px"}}>Track your daily well-being</h2> */}
 <h2 style={{position:"absolute",left:"50%",top:"0"}}>Tracker</h2>

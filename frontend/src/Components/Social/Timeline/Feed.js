@@ -28,21 +28,21 @@ const Feed = () => {
              if(user){
                 console.log(user)
             const id =  await getuser(user);
-            console.log(id);
+        
             const pp = id[0].profilepic;
               setU(pp);
              }
         const timeline = await getTimeline();
         
         setTimeline(timeline);
-        console.log(timeline);
+      
 
           
 
         }
         
         fetchData();
-    },[timeline])
+    },[])
 
 const sendPost = () => {
 

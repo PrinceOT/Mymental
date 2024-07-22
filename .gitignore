@@ -5,7 +5,7 @@ node_modules/
 /.pnp
 .pnp.js
 .README.md
-
+.env
 # testing
 /coverage
 

@@ -307,16 +307,35 @@ const Selfform = () => {
        </div>
         
      <div className='quiz-container'> 
+      {/* <h1> Mental Health Self-Assessment</h1>
      <h3>Over the last two weeks, how often have you
 been bothered by the following problems? </h3>
-
+<h4></h4>
 
      <p>This test will help identify if you might be suffering from either depression, anxiety, ptsd or stress;</p> 
-     <h2>These series of questions is an indicator only and not meant to replace a full assessment by a qualified clinician.</h2>
+     <h3 style={{"fontSize":"25px"}}>These series of questions is an indicator only and not meant to replace a full assessment by a qualified clinician.</h3>
      <p>if you have concerns about your mental health or well-being, it is crucial to seek advice from a qualified mental health professional. They can offer personalized guidance based on a thorough assessment of your individual circumstances.
 </p>
      <p>The results obtained from this assessment are intended to offer general insights and may not accurately reflect an individual's specific mental health condition.
-</p>
+</p> */}
+
+        <h1>Mental Health Self-Assessment</h1>
+        <p>Over the last two weeks, how often have you been bothered by the following problems?</p>
+        
+        <h3>Purpose</h3>
+        <p>This test aims to identify potential symptoms of depression, anxiety, PTSD, or stress.</p>
+        
+        <h3>Important Notice</h3>
+        <ul>
+            <li><strong>Indicator Only:</strong> These questions are meant as an indicator and do not replace a full assessment by a qualified clinician.</li>
+            <li><strong>Seek Professional Advice:</strong> If you have concerns about your mental health or well-being, it is crucial to consult a qualified mental health professional. They can offer personalized guidance based on a thorough assessment of your individual circumstances.</li>
+        </ul>
+        
+        <h3>Disclaimer</h3>
+        <p>The results from this assessment are intended to offer general insights and may not accurately reflect an individual's specific mental health condition.</p>
+   
+
+
 
 
     </div>
