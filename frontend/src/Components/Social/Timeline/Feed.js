@@ -1,8 +1,14 @@
 import react, { useState,useEffect} from 'react';
 import Post from './Post';
 import '../../../App.scss'
-import {
-    Attachment
+
+  import {
+    MoreHoriz,
+    Attachment,
+    ChatBubbleOutline,
+    ChatBubble,
+   FavoriteBorderOutlined,
+   FavoriteOutlined
   } from "@mui/icons-material"
 import { getTimeline,postTimeline } from '../../../Dbqueries/qtimeline';
 import { addWords, isBad } from 'adults';
@@ -14,6 +20,7 @@ import { emojify } from 'node-emoji';
 const Feed = () => {
     const[timeline,setTimeline] = useState([])
     const [badWord, setbadWord] = useState(false);
+    const [triggerRender, setTriggerRender] = useState(true);
     const {user} = useAuth()
     const [u,setU] = useState("")
     const [input,setInput] = useState({
@@ -42,16 +49,18 @@ const Feed = () => {
         }
         
         fetchData();
-    },[])
+    },[triggerRender])
 
-const sendPost = () => {
+const sendPost = async () => {
 
     const isBadWord = isBad(input.Content);
-   
-    if(!isBadWord){
-        postTimeline(input,user);
-    }
+    console.log("post")
+   console.log(isBadWord)
+ 
+       await postTimeline(input,user);
+    
     setInput("")
+    setTriggerRender(!triggerRender)
 };
 
     return (
@@ -71,7 +80,11 @@ const sendPost = () => {
                     <div class="pb_input">
                         <input type="text" value={input.Content} placeholder='Whats on your mind?...' onChange={(e)=>setInput({Content:emojify(e.target.value)})}/>
                     </div>
-                    <button  onClick={()=>sendPost()}>Post</button>
+                    {/* <button  onClick={()=>sendPost()}>Post</button> */}
+                    <div class ="item" onClick={()=>sendPost()}>
+       <FavoriteBorderOutlined />
+     
+    </div>
 
                         </div>
                     </form>

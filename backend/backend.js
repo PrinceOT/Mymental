@@ -122,7 +122,7 @@ app.post("/post",async(req,res)=>{
           const values = [fbid,rd.Image,rd.Content,0];
 
          const newlog = await pool.query(query,values)
-          res.json({ message: 'Data inserted successfully' });
+          res.json({ message: newlog});
           console.log('Data inserted successfully');
           //res.json(processedData);
         
