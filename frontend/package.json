@@ -35,13 +35,16 @@
     "swiper": "^11.0.5",
     "timeago.js": "^4.0.2",
     "uuid": "^9.0.1",
+    "vercel": "^35.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build" 
   },
   "eslintConfig": {
     "extends": [
@@ -61,10 +64,10 @@
       "last 1 safari version"
     ]
   },
-  
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",
+    "gh-pages": "^6.1.1",
     "jest-html-reporter": "^3.10.2",
     "node-sass": "^7.0.3",
     "react-test-renderer": "^18.2.0",
