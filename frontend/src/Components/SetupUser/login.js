@@ -18,7 +18,9 @@ const  [form,setForm] = useState({
 //const [user, setUser] = useState(null);
 //const auth = getAuth();
 
-
+function timeout( delay) {
+  return new Promise( res => setTimeout(res, delay) );
+}
 const handleChange = (e) =>{
    // console.log(user);
     const { name, value } = e.target;
@@ -38,10 +40,18 @@ const handleLogout = async () => {
   };
 const handleLogin = async (e) => {
     e.preventDefault();
+    console.log(form.email);
    try {
    
-          const resp = await signIn(form.email,form.psw);
+
+    console.log(form.psw);
+          const resp =  await signIn(form.email,form.psw);
+         // console.log(resp)
+         console.log(form.psw);
+         
+          console.log(resp)
            resp === "User inValid" ? setErrors("Invalid password or username") : navigate('/mymental')
+         
            //setForm({ email: '', psw: '' });
            
      } catch (error) {
