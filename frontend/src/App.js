@@ -39,13 +39,14 @@ function App() {
 
   return ( 
     
-    <>
+    
    
 <BrowserRouter style={{display:"grid",gridTemplateColumns:"1fr 1fr"}}>
  <Navbar/>
  {/* <Navbar/>  */}
 
 {/* <Navbar/> */}
+
 <Routes>
 
 <Route  element={    <ProtectedRoutes user={user}/> }>
@@ -76,7 +77,7 @@ function App() {
 
 <Route path = '/gameplay' element={<GameEmbed/>}></Route>
 
-<Route path = '/mymental/getsupport' element={<Support/>}></Route>
+<Route path = '/mymental/getsupport' element={<Support style={{marginLeft:"100px"}}/>}></Route>
 
 
 
@@ -84,7 +85,7 @@ function App() {
 </Routes>
 
 </BrowserRouter>
-</>
+
    
   );
 }
