@@ -1,8 +1,13 @@
 
 import './support.scss'
+import Navbar from '../Misc/navbar';
+
 const Support = () =>{
 
     return(
+      <div style={{display:"grid",gridTemplateColumns: "1fr 1fr"}}>
+
+ 
         <section class="RG" id="RG-LandingPage" >
             <h1 class="RG-type-h2" style={{padding:"50px 18px 0 18px"}}>Need Support</h1>
         <div class="MH-Resources">
@@ -572,7 +577,7 @@ const Support = () =>{
 
 
 <p>&nbsp;</p>
-</div></section>
+</div></section> </div>
     )
 }
 export default Support;

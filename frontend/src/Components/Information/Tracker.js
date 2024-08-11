@@ -1,8 +1,7 @@
 import React, { useEffect, useRef,useState } from 'react';
 import { useAuth  } from '../../Auth/AuthProvider';
 import { Chart, registerables } from 'chart.js';
-import Register from '../SetupUser/signup';
-import { LineChart as LC } from '@mui/x-charts/LineChart';
+
 
 import { getUserData } from '../../Dbqueries/qtracker';
 import {format} from "timeago.js"
@@ -11,18 +10,27 @@ Chart.register(...registerables);
 
 
 let chart;
+let chart2;
+let chart3;
+let chart4;
+let chart5;
 let last30Days;
 
 
 const LineChart = () => {
   const { user} = useAuth();
-  const [length, setlength] = useState(7);
-  const [total,setTotal] = useState([])
-  const [d,setd] = useState([])
-  const [a,seta] = useState([])
-  const [s,sets] = useState([])
-  const [p,setp] = useState([])
-  const [t,sett] = useState([])
+  const [lengths, setlengths] = useState(7);
+  const [lengthd, setlengthd] = useState(7);
+  const [lengtha, setlengtha] = useState(3);
+  const [lengthp, setlengthp] = useState(3);
+  const [loading,setLoading] = useState(0);
+ 
+  // const [total,setTotal] = useState([])
+  // const [d,setd] = useState([])
+  // const [a,seta] = useState([])
+  // const [s,sets] = useState([])
+  // const [p,setp] = useState([])
+  // const [t,sett] = useState([])
   
 
  // const { response,isLoading}=useQuery('fetchData',()=>
@@ -122,6 +130,10 @@ daylist = daylist.map((v)=>v.toLocaleDateString('en-GB'));
   //console.log('love');
    //last30Days = getLast30Days();
   const chartRef = useRef(null);
+  const chartRef2 = useRef(null);
+  const chartRef3 = useRef(null);
+  const chartRef4 = useRef(null);
+  const chartRef5 = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -137,29 +149,36 @@ daylist = daylist.map((v)=>v.toLocaleDateString('en-GB'));
       var ptsd;
       var stress;
       var dates;
+      var datess;
+      var datesa;
+      var datesd;
+      var datesp;
 
         //console.log(userData); // This will log the updated data
-        if(userData.length > length){
-         total = take(userData.map(data=>data.total),length);
-         depression = take(userData.map(data=>data.depression),length);
-         anxiety = take(userData.map(data=>data.anxiety),length);
+        // if(userData.length > length){
+         //total = take(userData.map(data=>data.total),length);
+         depression = take(userData.map(data=>data.depression),lengthd);
+         anxiety = take(userData.map(data=>data.anxiety),lengtha);
         //setLog({...log,a:anxiety})
-         ptsd = take(userData.map(data=>data.ptsd),length);
+         ptsd = take(userData.map(data=>data.ptsd),lengthp);
         //setLog({...log,p:ptsd})
-         stress = take(userData.map(data=>data.stress),length);
+         stress = take(userData.map(data=>data.stress),lengths);
         //setLog({...log,s:stress})
-         dates = take(userData.map(data=> format(data.created_at)),length);
-        }else{
-           total = userData.map(data=>data.total);
-         depression = userData.map(data=>data.depression);
-         anxiety = userData.map(data=>data.anxiety);
-        //setLog({...log,a:anxiety})
-         ptsd = userData.map(data=>data.ptsd);
-        //setLog({...log,p:ptsd})
-         stress = userData.map(data=>data.stress);
-        //setLog({...log,s:stress})
-         dates = userData.map(data=> format(data.created_at));
-        }
+         datesa = take(userData.map(data=> format(data.created_at)),lengtha);
+         datess = take(userData.map(data=> format(data.created_at)),lengths);
+         datesd = take(userData.map(data=> format(data.created_at)),lengthd);
+         datesp = take(userData.map(data=> format(data.created_at)),lengthp);
+        // }else{
+        //    total = userData.map(data=>data.total);
+        //  depression = userData.map(data=>data.depression);
+        //  anxiety = userData.map(data=>data.anxiety);
+        // //setLog({...log,a:anxiety})
+        //  ptsd = userData.map(data=>data.ptsd);
+        // //setLog({...log,p:ptsd})
+        //  stress = userData.map(data=>data.stress);
+        // //setLog({...log,s:stress})
+        //  dates = userData.map(data=> format(data.created_at));
+        // }
         
           
        
@@ -171,7 +190,11 @@ daylist = daylist.map((v)=>v.toLocaleDateString('en-GB'));
      //console.log(dat.total);
      //console.log(log.t);
     
-    const ctx = chartRef.current.getContext('2d');
+    // const ctx = chartRef.current.getContext('2d');
+    const ctx2 = chartRef2.current.getContext('2d');
+    const ctx3 = chartRef3.current.getContext('2d');
+    const ctx4 = chartRef4.current.getContext('2d');
+    const ctx5 = chartRef5.current.getContext('2d');
     
     var config = {
       type: 'line',
@@ -221,18 +244,205 @@ daylist = daylist.map((v)=>v.toLocaleDateString('en-GB'));
       }
     }
   }
-   if (chart) {
-      chart.destroy();
-      chart = new Chart(ctx, config);
+    var config2 = {
+      type: 'line',
+      data: {
+        labels: datesd,
+        datasets: [{label: 'Depression',
+        data: depression,
+        borderColor: 'orange',
+        borderWidth: 2,
+          
+      }],
+     options: {
+      grid:{
+        showgrid:false,},
+        scales: {
+          x: [{
+            type: 'linear',
+            position: 'bottom',
+            gridLines: {
+              display:false
+          }   
+            
+          }],
+          y: [{
+            gridLines: {
+              display:false
+          } ,  
+            
+            beginAtZero: true,
+          }]
+        }
+      }
+    }
+  }
+    var config3 = {
+      type: 'line',
+      data: {
+        labels: datesa,
+        datasets: [{label: 'Anxiety',
+      data: anxiety,
+      borderColor: 'blue',
+      borderWidth: 2,
+        
+    }],
+     options: {
+      grid:{
+        showgrid:false,},
+        scales: {
+          x: [{
+            type: 'linear',
+            position: 'bottom',
+            gridLines: {
+              display:false
+          }   
+            
+          }],
+          y: [{
+            gridLines: {
+              display:false
+          } ,  
+            
+            beginAtZero: true,
+          }]
+        }
+        
+      }
+    }
+  }
+    var config4 = {
+      type: 'line',
+      data: {
+        labels: datesp,
+        datasets: [{label: 'Ptsd',
+    data: ptsd,
+    borderColor: 'rgba(75, 192, 192, 1)',
+    borderWidth: 2,
+      
+  }],
+     options: {
+      grid:{
+        showgrid:false,},
+        scales: {
+          x: [{
+            type: 'linear',
+            position: 'bottom',
+            gridLines: {
+              display:false
+          }   
+            
+          }],
+          y: [{
+            gridLines: {
+              display:false
+          } ,  
+            
+            beginAtZero: true,
+          }]
+        }
+      }
+    }
+  }
+    var config5 = {
+      type: 'line',
+      data: {
+        labels: datess,
+        datasets: [{label: 'Stress',
+  data: stress,
+  borderColor: 'green',
+  borderWidth: 2,
+    
+}],
+     options: {
+      grid:{
+        showgrid:false,},
+        scales: {
+          x: [{
+            type: 'linear',
+            position: 'bottom',
+            gridLines: {
+              display:false
+          }   
+            
+          }],
+          y: [{
+            gridLines: {
+              display:false
+          } ,  
+            
+            beginAtZero: true,
+          }]
+        }
+      }
+    }
+  }
+
+
+
+   if (chart4) {
+      
+      chart2.destroy();
+      chart3.destroy();
+      chart4.destroy();
+      chart5.destroy();
+      // chart = new Chart(ctx, config);
+      chart2 = new Chart(ctx2, config2);
+      chart3 = new Chart(ctx3, config3);
+      chart4 = new Chart(ctx4, config4);
+      chart5 = new Chart(ctx5, config5);
       
     } else {
-      chart = new Chart(ctx, config);
+      // chart = new Chart(ctx, config);
+      chart2 = new Chart(ctx2, config2);
+      chart3 = new Chart(ctx3, config3);
+      chart4 = new Chart(ctx4, config4);
+      chart5 = new Chart(ctx5, config5);
       
     }
     } 
 };
 fetchData();
-  }, [user]);
+  }, [  loading  ]);
+
+  
+  
+
+  async function reviewsHandler (topic,number)  {
+
+    try {
+     
+    switch(topic){
+      case 'Depression':
+        setlengthd(number);
+        setLoading(loading + 1);
+          break;
+      case 'Anxiety':
+        
+      setlengtha(number);
+      setLoading(loading + 1);
+            break;
+      case 'Ptsd':
+        setlengthp(number);
+        setLoading(loading + 1);
+            break;
+
+      case 'Stress':
+        setlengths(number);
+        setLoading(loading + 1);
+            break;
+
+      default:
+        console.log('Error in topics');
+        break;
+    }
+    
+    
+   
+}
+catch(error) {
+  console.error(error);
+}};
 
   return (
 <>
@@ -242,30 +452,71 @@ fetchData();
 <h2 style={{position:"absolute",left:"50%",top:"0"}}>Tracker</h2>
     <section class="tracker">
   
-      <canvas style={{height:"100px",width:"100px",marginTop:"50px"}} ref={chartRef}></canvas>
+      {/* <canvas  ref={chartRef}></canvas> */}
     
-    </section> </>):(<section class="tracker">
-       <LC
-       xAxis={[{ data: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52]}]}
-       series={[
-         {
-          label:"Depression",
-           data: d,
-         },
-         {
-          label:"Anxiety",
-           data: a,
-         },
-         {
-          label:"Stress",
-           data: s
-         },
-       ]}
-       width={800}
-       height={700}
-     />
+    </section> </>):(
+
+<div class="container12">
+<p class="container-title">Track your mental</p>
+
+<div class="gradient-cards">
+  <div class="card12">
+    <div class="container-card bg-green-box">
+    
+      <p class="card-title">Depression</p>
+    
+      
+    <canvas  ref={chartRef2}></canvas>  <button className='button-30' onClick={() => reviewsHandler('Depression',7)}>Past Week</button>  <button className='button-30' onClick={() => reviewsHandler('Depression',30)}>Past Month</button></div>
+  </div>
+
+  <div class="card12">
+    <div class="container-card bg-white-box">
+   
+      <p class="card-title">Anxiety</p>
+      
+    <canvas  ref={chartRef3}></canvas><button className='button-30' onClick={() => reviewsHandler('Anxiety',7)} style={{backgroundColor:"blue"}}>Past Week</button>  <button className='button-30' onClick={() => reviewsHandler('Anxiety',30)}  style={{backgroundColor:"blue"}}>Past Month</button> </div>
+  </div>
+
+  <div class="card12">
+    <div class="container-card bg-yellow-box">
+    
+      <p class="card-title">Ptsd</p>
      
-</section>
+   <canvas  ref={chartRef4}></canvas> <button className='button-30' onClick={() => reviewsHandler('Ptsd',7)} style={{backgroundColor:"turquoise"}}>Past Week</button>  <button className='button-30' onClick={() => reviewsHandler('Ptsd',30)} style={{backgroundColor:"turquoise"}}>Past Month</button></div>
+  </div>
+
+  <div class="card12">
+    <div class="container-card bg-blue-box">
+   
+      <p class="card-title">Stress</p>
+     
+<canvas  ref={chartRef5}></canvas> <button className='button-30' onClick={() => reviewsHandler('Stress',7)} style={{backgroundColor:"green"}}>Past Week</button>  <button className='button-30' onClick={() => reviewsHandler('Stress',30)} style={{backgroundColor:"green"}}> Past Month</button>
+    </div> 
+  </div>
+</div>
+</div>
+//       <section class="tracker">
+//    <LC
+//        xAxis={[{ data: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52]}]}
+//        series={[
+//          {
+//           label:"Depression",
+//            data: d,
+//          },
+//          {
+//           label:"Anxiety",
+//            data: a,
+//          },
+//          {
+//           label:"Stress",
+//            data: s
+//          },
+//        ]}
+//        width={800}
+//        height={700}
+//      />
+     
+// </section>
     )}
     </>
   );

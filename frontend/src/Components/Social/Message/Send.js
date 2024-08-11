@@ -64,6 +64,11 @@ const Send = () =>{
         //setInput(input+emojiObject.emoji)
         console.log(emojiObject)
       };
+
+      window.addEventListener('keydown',(event)=>{
+        if(event.key == "Enter")
+            sendMessage();
+      })
 //     const yest = (emoji,e) => {
 // console.log(emoji.getImageUrl);
         

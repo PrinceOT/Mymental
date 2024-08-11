@@ -241,6 +241,9 @@ console.log(level);
 
     
     <div className="home-page">
+             <div class="seven">
+  <h1>Style Seven</h1>
+</div>
       
 { src ?  (
   <div>
@@ -248,8 +251,12 @@ console.log(level);
        {topic.map((topic)=>(
        
         <div class='gamepage_title'>
+
+<div class="ten">
+  <h1>{topic} <span>Check out our cataloge of games we think is great for if you're feeling depressed and want to feel better. These games are cool but sometimes talking to someone helps even better. There are people who want to help</span></h1>
+</div>
           <h2> {data2[topic]}<a href='mymental/getsupport'>There are people who want to help.</a></h2>
-        <h1>{topic}</h1>
+      
          
         <div>
       
@@ -265,9 +272,12 @@ console.log(level);
 
   {topic.map((topic)=>(
         <div class='gamepage_title'>
-          <h2> {data[topic]}<a href='mymental/getsupport'>There are people who want to help</a></h2>
-        <h1>{topic}</h1>
+          <div class="ten">
+  <h1>{topic} <br/><span>{data[topic]} </span></h1>
+</div>
      
+          
+       
         <div>
         
       <GameList games={games.filter((games) => (

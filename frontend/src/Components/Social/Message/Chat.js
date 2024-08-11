@@ -114,7 +114,7 @@ console.log(u);
           <p class="name">{data.user?.username}</p>
           <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
         </div>
-        <div class="messages-chat"  style={{  overflow:"hidden"}}>
+        <div class="messages-chat"  style={{  overflow:"scroll"}}>
         {chat && chat.map((message)=>(
             <Message key={message.id} message={message}/>
         ))}

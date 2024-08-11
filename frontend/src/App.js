@@ -34,20 +34,23 @@ import PublicRoutes from './Auth/publicRoutes';
 function App() {
   const {user} = useAuth()
   
- 
+ // lnAWdfOMpJtQ3Tm8 lnAWdfOMpJtQ3Tm8
 
 
   return ( 
     
-    
-<BrowserRouter>
- <Navbar/> 
+    <>
+   
+<BrowserRouter style={{display:"grid",gridTemplateColumns:"1fr 1fr"}}>
+ <Navbar/>
+ {/* <Navbar/>  */}
+
 {/* <Navbar/> */}
 <Routes>
 
 <Route  element={    <ProtectedRoutes user={user}/> }>
 
-<Route path = '/mymental/' element={    <Feed/> }/>
+<Route path = '/' element={    <Feed/> }/>
 <Route path = '/mymental/tracker' element={  <LineChart/>}></Route>
 
 <Route path = '/mymental/profile' element={<Profile/>}/>
@@ -81,7 +84,7 @@ function App() {
 </Routes>
 
 </BrowserRouter>
-
+</>
    
   );
 }
