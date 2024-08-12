@@ -56,9 +56,9 @@ function App() {
 
 <Route path = '/mymental/profile' element={<Profile/>}/>
 <Route path = '/mymental/profile/edit' element={<ProfileEdit/>}/>
-
-</Route>
 <Route path = '/message' element={<Chat/>}/>
+</Route>
+
 <Route  element={    <PublicRoutes user={user}/> }>
 <Route path = '/login' element={<Login/>}></Route>
 <Route path='/register' element={<Register/>}></Route> 

@@ -80,7 +80,7 @@ const sendPost = async () => {
                     <div class="pb_input">
                         <input type="text" value={input.Content} placeholder='Whats on your mind?...' onChange={(e)=>setInput({Content:emojify(e.target.value)})}/>
                     </div>
-                    {/* <button  onClick={()=>sendPost()}>Post</button> */}
+                    <button  onClick={()=>sendPost()}>Post</button>
                     <div class ="item" onClick={()=>sendPost()}>
        <FavoriteBorderOutlined />
      
