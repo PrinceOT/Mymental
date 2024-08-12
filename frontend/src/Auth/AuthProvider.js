@@ -29,7 +29,9 @@ const AuthProvider = ({ children }) => {
   const signIn = async (email, password) => {
     try{
       
-    const userCredential = await signInWithEmailAndPassword(auth, email, password)
+     await signInWithEmailAndPassword(auth, email, password);
+     
+     return "User Valid";
     //console.log('provide');
     } catch(error){
       if(error.code === "auth/invalid-email"){
@@ -77,7 +79,7 @@ const AuthProvider = ({ children }) => {
      console.log(userCredential.user)
     
   
-     const response = await signupuser(username,password,email,userCredential.user.uid,pic[num].url);
+      await signupuser(username,password,email,userCredential.user.uid,pic[num].url);
      return "User created";
    
      } 

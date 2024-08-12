@@ -32,6 +32,7 @@ const Register = () => {
        try {
         if(validateForm()){
           const newErrors = {};
+          navigate('/mymental')
               const response =  await register(form.email,form.psw ,form.user);
               console.log(response);
                response === "User created" ?  navigate('/mymental') : newErrors.email = 'Email address already in use';

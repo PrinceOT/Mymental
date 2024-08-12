@@ -40,18 +40,12 @@ const handleLogout = async () => {
   };
 const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(form.email);
-   try {
    
-
-    console.log(form.psw);
-          const resp =  await signIn(form.email,form.psw);
-         // console.log(resp)
-         console.log(form.psw);
-         
-          console.log(resp)
-           resp === "User inValid" ? setErrors("Invalid password or username") : navigate('/mymental')
-         
+   try {
+    
+   
+          await signIn(form.email,form.psw) === "User inValid" ? setErrors("Invalid password or username") : navigate('/mymental')
+        
            //setForm({ email: '', psw: '' });
            
      } catch (error) {
