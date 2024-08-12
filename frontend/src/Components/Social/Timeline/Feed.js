@@ -54,12 +54,16 @@ const Feed = () => {
 const sendPost = async () => {
 
     const isBadWord = isBad(input.Content);
-    console.log("post")
-   console.log(isBadWord)
- 
+   
+   
+ if (!isBadWord){
+
        await postTimeline(input,user);
-    
-    setInput("")
+ }
+    setInput({
+        Content:"",
+        Image:"",
+    })
     setTriggerRender(!triggerRender)
 };
 
@@ -75,19 +79,19 @@ const sendPost = async () => {
                 <div class='postbox'>
                 <div class ="userInfo">
       <img src={u} alt=""/> 
-                    <form class="pb_form">
+                    <div class="pb_form">
                         <div class="pb_form-field">
                     <div class="pb_input">
                         <input type="text" value={input.Content} placeholder='Whats on your mind?...' onChange={(e)=>setInput({Content:emojify(e.target.value)})}/>
                     </div>
                     <button  onClick={()=>sendPost()}>Post</button>
-                    <div class ="item" onClick={()=>sendPost()}>
-       <FavoriteBorderOutlined />
+                    {/* <div class ="item" onClick={()=>sendPost()}> */}
+       {/* <FavoriteBorderOutlined /> */}
      
-    </div>
+    {/* </div> */}
 
                         </div>
-                    </form>
+                    </div>
                     </div>
                 </div>
                 </div>

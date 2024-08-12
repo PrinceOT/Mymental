@@ -139,7 +139,7 @@ app.post("/post",async(req,res)=>{
 app.get("/post",async(req,res)=>{
    
     try {
-      const query = "select imageurl,username,content,users.fbid,ptid,post.created_at, profilepic from post inner join users on users.fbid = post.fbid order by ptid ASC"
+      const query = "select imageurl,username,content,users.fbid,ptid,post.created_at, profilepic from post inner join users on users.fbid = post.fbid order by created_at DESC"
       const timeline = await pool.query(query);
       res.json(timeline.rows)
         
