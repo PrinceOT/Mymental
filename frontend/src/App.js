@@ -49,7 +49,7 @@ function App() {
 
 <Routes>
 
-{/* <Route  element={    <ProtectedRoutes user={user}/> }> */}
+<Route  element={    <ProtectedRoutes user={user}/> }>
 
 <Route path = '/mymental' element={    <Feed/> }/>
 <Route path = '/mymental/tracker' element={  <LineChart/>}></Route>
@@ -57,12 +57,12 @@ function App() {
 <Route path = '/mymental/profile' element={<Profile/>}/>
 <Route path = '/mymental/profile/edit' element={<ProfileEdit/>}/>
 
-{/* </Route> */}
+</Route>
 <Route path = '/message' element={<Chat/>}/>
-{/* <Route  element={    <PublicRoutes user={user}/> }> */}
+<Route  element={    <PublicRoutes user={user}/> }>
 <Route path = '/login' element={<Login/>}></Route>
 <Route path='/register' element={<Register/>}></Route> 
-{/* </Route> */}
+</Route>
 
 
 
