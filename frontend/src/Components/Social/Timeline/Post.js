@@ -42,6 +42,7 @@ const [commentNum,setCommentNum] = useState(0);
   const [liked,setLiked] = useState();
 
    useEffect(()=>{
+    const interval = 5000;
         const fetchData = async () =>{
         
        if(imageurl){
@@ -75,6 +76,8 @@ if(user){
  
         }
         fetchData();
+        const intervalId = setInterval(fetchData, interval);
+        return () => clearInterval(intervalId);
     },[triggerRender])
 
     const postComment = async () =>{

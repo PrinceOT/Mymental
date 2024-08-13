@@ -29,11 +29,16 @@ const Feed = () => {
     });
 
     useEffect(()=>{
+        const interval = 5000;
             
         const fetchData = async () =>{
             addWords("kill","die")
              if(user){
-                console.log(user)
+              
+            //     const response = await fetch('http://localhost:3001/get-latest-data');
+            //     console.log(response)
+            //    const result = await response.json();
+            //     console.log(result)
             const id =  await getuser(user);
         
             const pp = id[0].profilepic;
@@ -49,6 +54,8 @@ const Feed = () => {
         }
         
         fetchData();
+        const intervalId = setInterval(fetchData, interval);
+        return () => clearInterval(intervalId);
     },[triggerRender])
 
 const sendPost = async () => {

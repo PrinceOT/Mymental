@@ -446,18 +446,10 @@ catch(error) {
 
   return (
 <>
-{ false ? (
-  <>
-  {/* <h2 style={{marginLeft:"200px"}}>Track your daily well-being</h2> */}
-<h2 style={{position:"absolute",left:"50%",top:"0"}}>Tracker</h2>
-    <section class="tracker">
-  
-      {/* <canvas  ref={chartRef}></canvas> */}
-    
-    </section> </>):(
+
 
 <div class="container12">
-<p class="container-title">Track your mental</p>
+<p class="seven" style={{paddingTop:"10px",paddingLeft:"30px"}}> <h1>Track your mental</h1></p>
 
 <div class="gradient-cards">
   <div class="card12">
@@ -495,29 +487,7 @@ catch(error) {
   </div>
 </div>
 </div>
-//       <section class="tracker">
-//    <LC
-//        xAxis={[{ data: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52]}]}
-//        series={[
-//          {
-//           label:"Depression",
-//            data: d,
-//          },
-//          {
-//           label:"Anxiety",
-//            data: a,
-//          },
-//          {
-//           label:"Stress",
-//            data: s
-//          },
-//        ]}
-//        width={800}
-//        height={700}
-//      />
-     
-// </section>
-    )}
+
     </>
   );
 };
