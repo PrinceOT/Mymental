@@ -43,6 +43,8 @@ const Profile = () => {
         
        },[user ]);
 return(
+    <>
+    { info.username ? (
     <div class ="profile">
         <div class="images">
             <div  class = 'cover' style={{backgroundColor:info.backgroundcolor}} />
@@ -66,8 +68,11 @@ return(
            ))}
         </div> 
     </div>
+):(
+    <div></div>
+)}
+</>
 
 );
-
 }
 export default Profile;
