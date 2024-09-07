@@ -3,7 +3,7 @@ import react  from "react";
 import { useAuth ,AuthProvider } from '../../Auth/AuthProvider';
 import { doc,updateDoc} from 'firebase/firestore';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
 import { emojify } from 'node-emoji';
 import {getuser,updateuser} from '../../Dbqueries/qprofile';
 import "../../App.scss"
@@ -11,7 +11,7 @@ import "../../App.scss"
 
 
 const ProfileEdit = () => { 
- 
+  const navigate = useNavigate();
  
   const {user} = useAuth();
   const [info,setInfo] = useState({
@@ -302,6 +302,8 @@ const handleUpdate = async () => {
  try {
  
   await updateuser(user,form)
+  navigate('/mymental/profile')
+  
     
   
    } catch (error) {
@@ -312,6 +314,8 @@ const handleUpdate = async () => {
 
 return (
   <>
+  {info ? (
+    <>
   <head>
   <link
   rel="stylesheet"
@@ -377,7 +381,7 @@ return (
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
-                  <form class="form" novalidate="">
+                 
                     <div class="row">
                       <div class="col">
                         <div class="row">
@@ -419,10 +423,10 @@ return (
                     
                     <div class="row">
                       <div class="col d-flex justify-content-end">
-                        <button class="btn btn-primary" type="submit" onClick={()=>handleUpdate()}>Save Changes</button>
+                        <button class="btn btn-primary"  onClick={handleUpdate}>Save Changes</button>
                       </div>
                     </div>
-                  </form>
+                 
 
                 </div>
               </div>
@@ -441,7 +445,8 @@ return (
 
   </div>
 </div>
-</div>
+</div> </>):( <div></div>)
+}
 </>
 );
 
