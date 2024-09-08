@@ -109,7 +109,7 @@ return (
       <h3>I accept all terms & condition</h3>
     </div>
     <div class="input-box button">
-      <input type="Submit" />
+      <input type="Submit" name="Register" />
     </div>
     <div class="text">
       <h3>Already have an account? <a href="/login">Login now</a></h3>
