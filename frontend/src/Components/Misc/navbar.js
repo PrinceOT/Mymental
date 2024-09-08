@@ -41,7 +41,7 @@ const Navbar = () => {
       </li>
      
       <li class="navbar-item flexbox-left">
-        <a class="navbar-item-inner flexbox-left" href='/mymental'>
+        <a class="navbar-item-inner flexbox-left" href='/'>
           
           <div class="navbar-item-inner-icon-wrapper flexbox">
           <IonIcon icon={home}></IonIcon>
