@@ -23,7 +23,7 @@ const PublicRoutes = ({user}) => {
   }, [user]);
 
   const redirect = () => {
-    navigate('/mymental')
+    navigate('/')
 
   }
     
