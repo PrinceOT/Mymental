@@ -51,7 +51,7 @@ function App() {
 
 <Route  element={    <ProtectedRoutes user={user}/> }>
 
-<Route path = '/mymental' element={    <Feed/> }/>
+<Route path = '/' element={    <Feed/> }/>
 <Route path = '/mymental/tracker' element={  <LineChart/>}></Route>
 
 <Route path = '/mymental/profile' element={<Profile/>}/>
