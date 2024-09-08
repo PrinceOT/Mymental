@@ -242,7 +242,7 @@ console.log(level);
     
     <div className="home-page">
              <div class="seven">
-  <h1>Style Seven</h1>
+  <h1>Games</h1>
 </div>
       
 { src ?  (
