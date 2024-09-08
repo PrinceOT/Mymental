@@ -35,7 +35,7 @@ const Register = () => {
          
               const response =  await register(form.email,form.psw ,form.user);
               console.log(response);
-               response === "User created" ?  navigate('/mymental') : newErrors.email = 'Email address already in use';
+               response === "User created" ?  navigate('/') : newErrors.email = 'Email address already in use';
                setErrors(newErrors);
                //log in user after register signIn(form.email,form.psw)
                
