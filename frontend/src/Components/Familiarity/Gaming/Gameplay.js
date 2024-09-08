@@ -90,8 +90,8 @@ setPost({...post,Content:"",})
     {/* <PlayCircleOutlineIcon sx={{ fontSize: 500 }} style={{position:"relative",left:"15%",cursor:"pointer"}} onClick={()=>setPlay(true)}/> */}
     {true && <iframe
       src={src}
-      width="1000"
-      height="600"
+      width="1100"
+      height="700"
       title={title}
       style={{ border: 'none', borderRadius: '8px' }}
       allow={true}
