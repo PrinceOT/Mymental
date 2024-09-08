@@ -87,7 +87,17 @@ setPost({...post,Content:"",})
         <h1>{title}</h1>
       
     
-    <PlayCircleOutlineIcon sx={{ fontSize: 500 }} style={{position:"relative",left:"15%",cursor:"pointer"}} onClick={()=>setPlay(true)}/>
+    {/* <PlayCircleOutlineIcon sx={{ fontSize: 500 }} style={{position:"relative",left:"15%",cursor:"pointer"}} onClick={()=>setPlay(true)}/> */}
+    {true && <iframe
+      src={src}
+      width="1000"
+      height="600"
+      title={title}
+      style={{ border: 'none', borderRadius: '8px' }}
+      allow={true}
+      allowFullScreen={true}
+     
+    ></iframe> }
     <div class="item" >
     
     <SendTimeExtensionOutlined fontSize='large' id="eitem" />
@@ -97,12 +107,12 @@ setPost({...post,Content:"",})
     <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close"> &times;</span>
-    <form>
+    
   
   <input type="text" id="gamepost" name="gamepost" value={post.Content} onChange={(e)=>setPost({...post,Content:emojify(e.target.value),})} class="gamepost" placeholder='Post something about this game?...'/>
  
-  <input type="submit" onClick={()=>postgame()}value="Post"/>
-</form> 
+  <input type="button" onClick={()=>postgame()}value="Post"/>
+
   </div>
   
 
@@ -112,15 +122,7 @@ setPost({...post,Content:"",})
     <div class="item" onClick={()=>like()}>
     {liked ? <FavoriteOutlined  color='primary' fontSize='large' /> : <FavoriteBorderOutlined fontSize='large' />} <span>{likes} likes</span></div>
     
-    {play && <iframe
-      src={src}
-      width="800"
-      height="550"
-      title={title}
-      style={{ border: 'none', borderRadius: '8px' }}
-      allowFullScreen
-     
-    ></iframe> }
+    
     </div>
       
    );
